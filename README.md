@@ -1,2 +1,3 @@
 # daydayup
 study javascript
+## why
