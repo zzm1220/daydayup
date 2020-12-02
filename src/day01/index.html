@@ -1,0 +1,101 @@
+<!--
+ * @Author: zhimin
+ * @Date: 2020-12-02 09:57:44
+ * @LastEditors: zhimin
+ * @LastEditTime: 2020-12-02 10:43:00
+ * @FilePath: \daydayup\src\day01\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day01</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body.night {
+            background-color: #000000;
+            color: white;
+        }
+
+        div.content {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: red;
+            color: #000000;
+            transition: all 1s;
+        }
+
+        #modeCheckBox {
+            display: none;
+        }
+
+        #modeCheckBox:checked+div.content {
+            background-color: #000000;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+        }
+
+        header h1 {
+            flex: 1;
+        }
+
+        header label.modeBtn {
+            border: none;
+            flex-basis: 20px;
+        }
+
+        .content .modeBtn::after {
+            content: "🌞";
+        }
+
+        #modeCheckBox:checked+div.content .modeBtn::after {
+            content: "🌜";
+        }
+
+        div.pic img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="modeCheckBox">
+    <div class="content">
+        <header>
+            <h1>深夜食堂</h1>
+            <label id="js-modeBtn" class="modeBtn" for="modeCheckBox"></>
+        </header>
+        <main>
+            <div class="pic">
+                <img src="../img/1.jpg" alt="食堂">
+            </div>
+            <div class="desc">
+                <p>
+                    这是一间营业时间从午夜十二点到早上七点的特殊食堂。这里的老板，不太爱说话，却总叫人吃得热泪盈
+                    眶。在这里，自卑的舞蹈演员偶遇隐退多年舞界前辈，前辈不惜讲述自己不堪回首的经历不断鼓舞年轻人，最终令其重拾自信；轻言绝交的闺蜜因为吃到共同喜爱的美食，回忆起从前的友谊，重归于好；乐观的绝症患者遇到同命相连的女孩，两人相爱并相互给予力量，陪伴彼此完美地走过了最后一程；一味追求事业成功的白领，在这里结交了真正暖心的朋友，发现真情比成功更有意义。食物、故事、真情，汇聚了整部剧的主题，教会人们坦然面对得失，对生活充满期许和热情。每一个故事背后都饱含深情，情节跌宕起伏，令人流连忘返
+                    [6] 。
+                </p>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
