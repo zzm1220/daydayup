@@ -1,0 +1,2 @@
+# daydayup
+study javascript
