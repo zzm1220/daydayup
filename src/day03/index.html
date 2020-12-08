@@ -1,0 +1,78 @@
+<!--
+ * @Author: zhimin
+ * @Date: 2020-12-08 14:27:13
+ * @LastEditors: zhimin
+ * @LastEditTime: 2020-12-08 14:35:25
+ * @FilePath: \daydayup\src\day03\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        header {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .traffic {
+            display: flex;
+            flex-direction: column;
+            padding: .5rem;
+        }
+
+        .traffic .light {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background: #999999;
+        }
+
+        /*将class=traffic & class=pass元素下的第一个class=light的元素的背景色设置为绿色*/
+        .traffic.pass .light:nth-child(1) {
+            background-color: #0a6;
+            /*绿灯*/
+        }
+
+        .traffic.wait .light:nth-child(2) {
+            background-color: #cc0;
+            /*黄灯*/
+        }
+
+        .traffic.stop .light:nth-child(3) {
+            background-color: #c00;
+            /*红灯*/
+        }
+    </style>
+</head>
+
+<body>
+    <header>模拟交通灯</header>
+    <main>
+        <div class="traffic pass">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+    </main>
+</body>
+
+</html>
